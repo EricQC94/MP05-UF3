@@ -46,6 +46,32 @@ class cercle extends forma{
 2. Com serà el codi en Java que implementi aquest diagrama?
 
 ```
+public class Persona {
+    public String ciutat;
+    public String cognoms;
+    public int telefon;
+    public int CP;
+    public String DNI;
+    public String adreça;
+    public String nom;
+
+}
+
+class Institut{
+    public int telefon;
+    public int CP;
+    public String ciutat;
+    public String nom;
+    public String adreça;
+}
+class Estudiant extends Persona{
+    private Institut estudia= new Institut();
+
+    public void matricula (Institut matriculat){
+        System.out.println("S'ha matriculat a" + matriculat);
+        this.estudia=matriculat;
+    }
+    
 class Estudiant extends Persona{
     private Institut estudia= new Institut();
 
@@ -80,33 +106,7 @@ La llista de contactes ens permetrà mantenir un número de contactes indefinits
 
 4. Com serà el codi en Java que l'implementi?
 
-```
-public class Persona {
-    public String ciutat;
-    public String cognoms;
-    public int telefon;
-    public int CP;
-    public String DNI;
-    public String adreça;
-    public String nom;
 
-}
-
-class Institut{
-    public int telefon;
-    public int CP;
-    public String ciutat;
-    public String nom;
-    public String adreça;
-}
-class Estudiant extends Persona{
-    private Institut estudia= new Institut();
-
-    public void matricula (Institut matriculat){
-        System.out.println("S'ha matriculat a" + matriculat);
-        this.estudia=matriculat;
-    }
-```
 
 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
 
