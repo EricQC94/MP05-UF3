@@ -325,31 +325,33 @@ Utilitzarem [Lucid](https://lucid.app/) i IntelliJ crea 2 interfícies, la seva 
 
 1. ![Selecció_213](https://user-images.githubusercontent.com/113598440/229057159-9720edcb-404a-483f-91e5-bb026ef6b70d.png)
 
+Interfície:
 ```
 package MP05;
 
 import javax.print.DocFlavor;
 
-interface butlleti2 {
-    public abstract int nota (int nota);
-    public abstract String Suspes (String Suspes);
-    public abstract String Aprovat (String Aprovat);
-    public abstract String Notable (String Notable);
-    public abstract String Excelent (String Excelent);
+public interface butlleti2 {
+    public void nota (int nota);
+    public void Suspes (String Suspes);
+    public void Aprovat (String Aprovat);
+    public void Notable (String Notable);
+    public void Excelent (String Excelent);
 }
 ```
-
+Classe:
 ```
 package MP05;
 public abstract class butlleti implements butlleti2 {
     public static void main(String[] args) {
+
         int nota = 5;
         String Suspes = "Suspes";
         String Aprovat = "Aprovat";
         String Notable = "Notable";
         String Excelent = "Excelent";
 
-        if (nota <= 4){
+        if (nota <= 4) {
             System.out.println(Suspes);
         } else if (nota <= 6) {
             System.out.println(Aprovat);
@@ -360,34 +362,156 @@ public abstract class butlleti implements butlleti2 {
         }
 
     }
+        @Override
+        public int nota (int nota){
+            return 0;
+        }
+
+        @Override
+        public String Suspes (String Suspes){
+            return Suspes;
+        }
+
+        @Override
+        public String Aprovat (String Aprovat){
+            return Aprovat;
+        }
+
+        @Override
+        public String Notable (String Notable){
+            return Notable;
+        }
+
+        @Override
+        public String Excelent (String Excelent){
+            return Excelent;
+        }
+
+    }
+
+```
+
+
+2.
+
+Interfície:
+```
+package MP05;
+
+public interface Area {
+
+    public void Quadrat();
+
+    public void Cercle();
+
+    public void Rectangle();
+
+    public void Triangle();
+
+}
+```
+
+Classe:
+```
+package MP05;
+
+import java.util.Scanner;
+
+public class areaFigura implements Area {
+
+    public void Cercle() {
+
+        Scanner kb = new Scanner(System.in);
+
+        System.out.println("Escriu el radi del cercle");
+
+        double r = kb.nextInt();
+
+        double areaCercle = 3.142 * r * r;
+
+        System.out.println("L'area del cercle es " + areaCercle);
+
+    }
 
     @Override
-    public int nota(int nota) {
-        return 0;
+
+    public void Quadrat() {
+
+// TODO Auto-generated method stub
+
+        Scanner kb2 = new Scanner(System.in);
+
+        System.out.println("Escriu la longitud del costat");
+
+        double s = kb2.nextInt();
+
+        double areaQuadrat = s * s;
+
+        System.out.println("L'area del quadrat es " + areaQuadrat);
+
     }
 
     @Override
-    public String Suspes(String Suspes) {
-        return Suspes;
+
+    public void Rectangle() {
+
+// TODO Auto-generated method stub
+
+        Scanner kb3 = new Scanner(System.in);
+
+        System.out.println("Escriu la longitud del rectangle");
+
+        double l = kb3.nextInt();
+
+        System.out.println("Escriu l'amplada del rectangle");
+
+        double b = kb3.nextInt();
+
+        double areaRectangle = l * b;
+
+        System.out.println("L'area del rectangle es " + areaRectangle);
+
     }
+
     @Override
-    public String Aprovat(String Aprovat) {
-        return Aprovat;
+
+    public void Triangle() {
+
+// TODO Auto-generated method stub
+
+        Scanner kb4 = new Scanner(System.in);
+
+        System.out.println("Escriu la base del triangle");
+
+        double base = kb4.nextInt();
+
+        System.out.println("Escriu la altura del triangle");
+
+        double h = kb4.nextInt();
+
+        double areaTriangle = 0.5 * base * h;
+
+        System.out.println("L'area del triangle es " + areaTriangle);
+
     }
-    @Override
-    public String Notable(String Notable) {
-        return Notable;
-    }
-    @Override
-    public String Excelent(String Excelent) {
-        return Excelent;
+
+    public static void main(String[] args) {
+
+        areaFigura geometry = new areaFigura();
+
+        geometry.Cercle();
+
+        geometry.Quadrat();
+
+        geometry.Rectangle();
+
+        geometry.Triangle();
+
     }
 
 }
 ```
 
-
-2.
 
 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
 # Utilitzar diagrames de classe per generar codi.
