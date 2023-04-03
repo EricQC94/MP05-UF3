@@ -323,7 +323,8 @@ public class laMevaCalculadora implements ICalculadora {
 
 Utilitzarem [Lucid](https://lucid.app/) i IntelliJ crea 2 interfícies, la seva codificació a Java i una classe que la implementi.
 
-1. ![Selecció_213](https://user-images.githubusercontent.com/113598440/229057159-9720edcb-404a-483f-91e5-bb026ef6b70d.png)
+1. 
+![Selecció_213](https://user-images.githubusercontent.com/113598440/229057159-9720edcb-404a-483f-91e5-bb026ef6b70d.png)
 
 Interfície:
 ```
@@ -393,6 +394,8 @@ public abstract class butlleti implements butlleti2 {
 
 
 2.
+![Selecció_218](https://user-images.githubusercontent.com/113598440/229502913-52ddcdf8-8373-4690-bd7a-d647421dc8fb.png)
+
 
 Interfície:
 ```
@@ -437,7 +440,7 @@ public class areaFigura implements Area {
 
     public void Quadrat() {
 
-// TODO Auto-generated method stub
+// TODO Auto-generated
 
         Scanner kb2 = new Scanner(System.in);
 
@@ -455,7 +458,7 @@ public class areaFigura implements Area {
 
     public void Rectangle() {
 
-// TODO Auto-generated method stub
+// TODO Auto-generated
 
         Scanner kb3 = new Scanner(System.in);
 
@@ -477,7 +480,7 @@ public class areaFigura implements Area {
 
     public void Triangle() {
 
-// TODO Auto-generated method stub
+// TODO Auto-generated
 
         Scanner kb4 = new Scanner(System.in);
 
