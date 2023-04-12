@@ -352,15 +352,6 @@ public abstract class butlleti implements butlleti2 {
         String Notable = "Notable";
         String Excelent = "Excelent";
 
-        if (nota <= 4) {
-            System.out.println(Suspes);
-        } else if (nota <= 6) {
-            System.out.println(Aprovat);
-        } else if (nota <= 8) {
-            System.out.println(Notable);
-        } else if (nota <= 10) {
-            System.out.println(Excelent);
-        }
 
     }
         @Override
